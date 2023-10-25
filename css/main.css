@@ -156,12 +156,15 @@ main {
     width: 100%;
 }
 .recommended-listing > .listing-item {
-    display: inline-block;
+    display: flex;
+    gap: 20px;
+    align-items: center;
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 20px;
+    position: relative;
 }
 .recommended-listing > .listing-item:last-child {
     margin-bottom: 0;
@@ -169,16 +172,15 @@ main {
 .recommended-listing .item-image {
     width: 25%;
     height: 120px;
-    float: left;
-    margin-right: 20px;
     object-fit: cover;
     object-position: center;
     border-radius: 10px;
 }
 .recommended-listing .item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     width: calc(75% - 40px);
-    float: left;
-    margin-top: 10px;
 }
 .recommended-listing .item-price {
     font-size: 20px;
@@ -191,10 +193,19 @@ main {
     font-size: 16px;
 }
 .recommended-listing .item-features {
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 15px;
     font-size: 14px;
 }
 .recommended-listing .feature {
-    float: left;
-    margin-right: 15px;
+}
+.recommended-listing .bookmark {
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    font-size: 30px;
+    color: red;
 }
