@@ -200,12 +200,27 @@ main {
 }
 .recommended-listing .feature {
 }
+.recommended-listing .feature > .fa {
+    margin-right: 5px;
+}
 .recommended-listing .bookmark {
     width: 20px;
     height: 30px;
     position: absolute;
-    top: 0;
+    top: -3px;
     right: 30px;
     font-size: 30px;
-    color: red;
+    color: #889ef9;
+    cursor: pointer;
+}
+.recommended-listing .bookmark > .fa-bookmark,
+.recommended-listing .bookmark:hover > .fa-bookmark-o,
+.recommended-listing .bookmark.active > .fa-bookmark-o,
+.recommended-listing .bookmark.active:hover > .fa-bookmark {
+    display: none;
+}
+.recommended-listing .bookmark:hover > .fa-bookmark,
+.recommended-listing .bookmark.active > .fa-bookmark,
+.recommended-listing .bookmark.active:hover > .fa-bookmark-o {
+    display: block;
 }
