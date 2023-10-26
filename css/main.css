@@ -86,6 +86,71 @@ main {
     margin-bottom: 30px;
 }
 
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+.form > .filter {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 14px;
+    background-color: #fff;
+}
+.form .filter-btn {
+    padding: 8px 35px;
+    background-color: #fff;
+    color: #8080ff;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.form .filter-btn:hover {
+    box-shadow: 0 2px 8px #88f8;
+}
+.form .filter-btn.active {
+    background-color: #8080ff;
+    color: #fff;
+}
+.form > .search {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+}
+.form .label {
+    display: none;
+}
+.form .input {
+    width: 0;
+    padding: 15px 0;
+    font-size: 20px;
+    flex-grow: 1;
+    border: none;
+}
+::placeholder {
+    color: red;
+    font-size: 15px;
+    font-style: italic;
+}
+.form .search-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    line-height: 20px;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: capitalize;
+    background-color: #ff9376;
+    color: #fff;
+    border-radius: 8px;
+    border: 2px solid #ff9376;
+    box-shadow: 0 4px 8px rgba(255, 147, 118, 0.27);
+}
+
 .neighborhood {
     width: 60%;
     float: left;
@@ -112,7 +177,6 @@ main {
 .neighborhood-listing > .listing-item {
     width: calc((100% - 2 * 30px) / 3);
     margin-right: 30px;
-    margin-bottom: 20px;
     float: left;
     background-color: pink;
     position: relative;
@@ -121,12 +185,16 @@ main {
 }
 .neighborhood-listing > .listing-item.last-item {
     margin-right: 0;
+    margin-bottom: 17px;
 }
 .neighborhood-listing .item-image {
     width: 100%;
     height: 250px;
     object-position: center;
     object-fit: cover;
+}
+.neighborhood-listing .last-item .item-image {
+    height: 190px;
 }
 .neighborhood-listing .item-size {
     background-color: #889ef9;
@@ -150,6 +218,24 @@ main {
 .neighborhood-listing .location {
 }
 .neighborhood-listing .name {
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    line-height: 20px;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: capitalize;
+    background-color: #ff9376;
+    color: #fff;
+    border-radius: 8px;
+    border: 2px solid #ff9376;
+    box-shadow: 0 4px 8px rgba(255, 147, 118, 0.27);
+}
+.btn:hover {
+    background-color: #fff;
+    color: #ff9376;
 }
 
 .recommended-listing {
